@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorReact", "BlazorReact\BlazorReact.csproj", "{12CC0F13-4B89-4E71-B1B0-81EA97678F7D}"
 EndProject
@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorReact8", "BlazorReact8\BlazorReact8\BlazorReact8.csproj", "{3858856E-6708-414B-9A21-16785661484C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorReact8.Client", "BlazorReact8\BlazorReact8.Client\BlazorReact8.Client.csproj", "{AAEC1420-9E7C-4FEA-8FA4-75785861E683}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +26,14 @@ Global
 		{12CC0F13-4B89-4E71-B1B0-81EA97678F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12CC0F13-4B89-4E71-B1B0-81EA97678F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12CC0F13-4B89-4E71-B1B0-81EA97678F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3858856E-6708-414B-9A21-16785661484C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3858856E-6708-414B-9A21-16785661484C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3858856E-6708-414B-9A21-16785661484C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3858856E-6708-414B-9A21-16785661484C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAEC1420-9E7C-4FEA-8FA4-75785861E683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEC1420-9E7C-4FEA-8FA4-75785861E683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEC1420-9E7C-4FEA-8FA4-75785861E683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEC1420-9E7C-4FEA-8FA4-75785861E683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

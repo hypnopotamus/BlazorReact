@@ -1,0 +1,13 @@
+﻿@rendermode InteractiveAuto
+@inject IJSRuntime JsWindow;
+
+<div @ref="_react">this is where react should be</div>
+
+@code {
+    private ElementReference _react;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) await JsWindow.InvokeVoidAsync("renderReact", _react);
+    }
+}

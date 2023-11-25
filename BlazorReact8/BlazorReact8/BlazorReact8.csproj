@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<TypeScriptCompile Remove="node_modules\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BlazorReact8.Client\BlazorReact8.Client.csproj" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
+		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.3.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<TypeScriptCompile Include="Components\React\HelloWorldReact.tsx">
+			<SubType>Code</SubType>
+		</TypeScriptCompile>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<TypeScriptTarget>ES2020</TypeScriptTarget>
+		<TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+		<TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+		<TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+		<TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+		<TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+		<TypeScriptOutFile></TypeScriptOutFile>
+		<TypeScriptOutDir></TypeScriptOutDir>
+		<TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+		<TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+		<TypeScriptSourceMap>True</TypeScriptSourceMap>
+		<TypeScriptMapRoot />
+		<TypeScriptSourceRoot />
+		<TypeScriptESModuleInterop>True</TypeScriptESModuleInterop>
+		<TypeScriptAllowSyntheticDefaultImports>True</TypeScriptAllowSyntheticDefaultImports>
+	</PropertyGroup>
+
+	<Target Name="npm restore" BeforeTargets="BeforeBuild">
+		<Exec Command="npm install" />
+	</Target>
+
+	<Target Name="webpack" AfterTargets="Build">
+		<Exec Command="npm run pack" />
+	</Target>
+
+	<Target Name="webpack clean" AfterTargets="Clean" Condition="Exists('node_modules')">
+		<Exec Command="npm run clean" />
+	</Target>
+
+</Project>
